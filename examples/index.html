@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/examples/css/master.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <svg id="svg" width="800px" height="80px"></svg>
+    <script type="text/javascript" src="../bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="../bower_components/moment/moment.js"></script>
+    <script type="text/javascript" src="../src/d3timeline.js"></script>
+    <script>
+
+      var scale = d3.time.scale().range([0, 800])
+        .domain([new Date (2014, 7, 0), new Date(2014, 8, 0)]);
+
+      var timeline = d3.starline.timeline();
+      timeline.scale(scale);
+      
+      var zoom = d3.behavior.zoom()
+        .x(timeline.scale())
+        .on("zoom", function() {
+          d3.select('#svg').call(timeline)
+        });
+
+      d3.select('#svg')
+        .call(timeline)
+        .call(zoom)
+        .on("dblclick.zoom", null)
+    </script>
+  </body>
+</html>

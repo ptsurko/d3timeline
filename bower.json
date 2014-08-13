@@ -1,0 +1,20 @@
+{
+  "name": "d3timeline",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ptsurko/d3timeline",
+  "authors": [
+    "ptsurko <pavel.tsurko@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.4.11",
+    "moment": "~2.8.1"
+  }
+}
