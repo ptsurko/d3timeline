@@ -1,18 +1,3 @@
-.axis path,
-.axis line {
-    fill: none;
-    stroke: black;
-    //shape-rendering: crispEdges;
-}
-
-
-rect.pane {
-  cursor: move;
-  fill: none;
-  pointer-events: all;
-}
-
-
 .timeline path,
 .timeline line {
     stroke: black;

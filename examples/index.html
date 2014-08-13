@@ -13,7 +13,7 @@
       var scale = d3.time.scale().range([0, 800])
         .domain([new Date (2014, 7, 0), new Date(2014, 8, 0)]);
 
-      var timeline = d3.starline.timeline();
+      var timeline = d3.timeline();
       timeline.scale(scale);
 
       var zoom = d3.behavior.zoom()
